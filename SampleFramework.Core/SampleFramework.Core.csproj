@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{613880E2-309D-4AAB-95D5-D9952A49A192}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SampleFramework.Core</RootNamespace>
+    <AssemblyName>SampleFramework.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\SampleFramework.Assets\Castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\SampleFramework.Assets\Newtonsoft\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\SampleFramework.Assets\Omu\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Abstractions">
+      <HintPath>..\SampleFramework.Assets\RavenDb\Raven.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Embedded">
+      <HintPath>..\SampleFramework.Assets\RavenDb\Raven.Client.Embedded.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\SampleFramework.Assets\RavenDb\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Database">
+      <HintPath>..\SampleFramework.Assets\RavenDb\Raven.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Storage.Esent">
+      <HintPath>..\SampleFramework.Assets\RavenDb\Raven.Storage.Esent.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\SampleFramework.Assets\StructureMap\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Common\TypeExtensions.cs" />
+    <Compile Include="Conventions\ModelsAreProxies.cs" />
+    <Compile Include="Conventions\ServicesAreSingletonsAndProxies.cs" />
+    <Compile Include="Domain\Attributes\AuditAttribute.cs" />
+    <Compile Include="Domain\AuditLog.cs" />
+    <Compile Include="Domain\Concrete\AuditableModel.cs" />
+    <Compile Include="Domain\Concrete\IAuditableModel.cs" />
+    <Compile Include="Domain\Concrete\Model.cs" />
+    <Compile Include="Domain\Enumerations\EntityState.cs" />
+    <Compile Include="Domain\Factories\ModelFactory.cs" />
+    <Compile Include="Domain\Person.cs" />
+    <Compile Include="Infrastructure\CloneInjection.cs" />
+    <Compile Include="Infrastructure\HttpModules\RavenDbModule.cs" />
+    <Compile Include="Infrastructure\HttpModules\StructureMapModule.cs" />
+    <Compile Include="Infrastructure\ModelCreationConverter.cs" />
+    <Compile Include="Infrastructure\ModelInterceptor.cs" />
+    <Compile Include="Infrastructure\ProxyUtil.cs" />
+    <Compile Include="Infrastructure\RavenDb\DocumentConversionListener.cs" />
+    <Compile Include="Infrastructure\ServiceInterceptor.cs" />
+    <Compile Include="Infrastructure\Singleton.cs" />
+    <Compile Include="Infrastructure\StructureMap\DynamicProxyInterceptor.cs" />
+    <Compile Include="Infrastructure\StructureMap\RavenDbRegistry.cs" />
+    <Compile Include="Infrastructure\StructureMap\RepositoryRegistry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IRavenDbRepository.cs" />
+    <Compile Include="Repository\RavenDbRepository.cs" />
+    <Compile Include="Services\AuditLogService.cs" />
+    <Compile Include="Services\Base\BaseService.cs" />
+    <Compile Include="Services\Base\IBaseService.cs" />
+    <Compile Include="Services\Factories\ServiceFactory.cs" />
+    <Compile Include="Services\Interfaces\IAuditLogService.cs" />
+    <Compile Include="Util\ContextHelper.cs" />
+    <Compile Include="Util\DocumentHelper.cs" />
+    <Compile Include="Util\Inflector.cs" />
+    <Compile Include="Util\RavenDb.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

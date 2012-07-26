@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleFramwork.Assets", "SampleFramwork.Assets", "{CB9E084C-0D3F-480B-8642-2CC73A8CD83D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RavenDb", "RavenDb", "{6CB2B8AD-0BE4-45C5-840E-48C51025238B}"
+	ProjectSection(SolutionItems) = preProject
+		SampleFramework.Assets\RavenDb\Raven.Abstractions.dll = SampleFramework.Assets\RavenDb\Raven.Abstractions.dll
+		SampleFramework.Assets\RavenDb\Raven.Client.Embedded.dll = SampleFramework.Assets\RavenDb\Raven.Client.Embedded.dll
+		SampleFramework.Assets\RavenDb\Raven.Database.dll = SampleFramework.Assets\RavenDb\Raven.Database.dll
+		SampleFramework.Assets\RavenDb\Raven.Storage.Esent.dll = SampleFramework.Assets\RavenDb\Raven.Storage.Esent.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleFramework.Core", "SampleFramework.Core\SampleFramework.Core.csproj", "{613880E2-309D-4AAB-95D5-D9952A49A192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleFramework.Web", "SampleFramework.Web\SampleFramework.Web.csproj", "{3EB5B58A-600F-41A9-9CCE-B67FB4B5B846}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructureMap", "StructureMap", "{56F297D1-B3BC-4375-BC52-83445A7FD9A8}"
+	ProjectSection(SolutionItems) = preProject
+		SampleFramework.Assets\StructureMap\StructureMap.dll = SampleFramework.Assets\StructureMap\StructureMap.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Newtonsoft", "Newtonsoft", "{C567D23A-B446-48F1-9070-5FAB01F7EB15}"
+	ProjectSection(SolutionItems) = preProject
+		SampleFramework.Assets\Newtonsoft\Newtonsoft.Json.dll = SampleFramework.Assets\Newtonsoft\Newtonsoft.Json.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Omu", "Omu", "{51B94E01-F995-4930-97F6-EAC2C9FA1BDF}"
+	ProjectSection(SolutionItems) = preProject
+		SampleFramework.Assets\Omu\Omu.ValueInjecter.dll = SampleFramework.Assets\Omu\Omu.ValueInjecter.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Castle", "Castle", "{D1AA3A56-5A51-4867-ABBA-9C1CDF1C09C2}"
+	ProjectSection(SolutionItems) = preProject
+		SampleFramework.Assets\Castle\Castle.Core.dll = SampleFramework.Assets\Castle\Castle.Core.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{613880E2-309D-4AAB-95D5-D9952A49A192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613880E2-309D-4AAB-95D5-D9952A49A192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{613880E2-309D-4AAB-95D5-D9952A49A192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613880E2-309D-4AAB-95D5-D9952A49A192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EB5B58A-600F-41A9-9CCE-B67FB4B5B846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB5B58A-600F-41A9-9CCE-B67FB4B5B846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB5B58A-600F-41A9-9CCE-B67FB4B5B846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB5B58A-600F-41A9-9CCE-B67FB4B5B846}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CB2B8AD-0BE4-45C5-840E-48C51025238B} = {CB9E084C-0D3F-480B-8642-2CC73A8CD83D}
+		{56F297D1-B3BC-4375-BC52-83445A7FD9A8} = {CB9E084C-0D3F-480B-8642-2CC73A8CD83D}
+		{C567D23A-B446-48F1-9070-5FAB01F7EB15} = {CB9E084C-0D3F-480B-8642-2CC73A8CD83D}
+		{51B94E01-F995-4930-97F6-EAC2C9FA1BDF} = {CB9E084C-0D3F-480B-8642-2CC73A8CD83D}
+		{D1AA3A56-5A51-4867-ABBA-9C1CDF1C09C2} = {CB9E084C-0D3F-480B-8642-2CC73A8CD83D}
+	EndGlobalSection
+EndGlobal
