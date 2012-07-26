@@ -21,7 +21,7 @@ namespace SampleFramework.Core {
 		public static void Startup() {
 		
 			var sampleFrameworkDb = new EmbeddableDocumentStore {
-				DataDirectory = "Data",
+				DataDirectory = "App_Data\\RavenDb",
 				UseEmbeddedHttpServer = true
 			};
 			
